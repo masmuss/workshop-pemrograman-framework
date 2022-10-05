@@ -41,7 +41,7 @@ AppAsset::register($this);
             ['label' => 'About', 'url' => ['/site/about']],
             ['label' => 'Contact', 'url' => ['/site/contact']],
             ['label' => 'Items', 'url' => ['/item/index']],
-            ['label' => 'Orders', 'url' => ['/order/index']],
+            ['label' => 'Orders', 'url' => ['/order-item/index']],
             ['label' => 'Customers', 'url' => ['/customer/index']],
             ['label' => 'Category', 'url' => ['/category/index']],
         ];
