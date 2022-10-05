@@ -12,6 +12,10 @@ return [
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
     'components' => [
+        'MyComponent' => [
+            'class' => 'frontend\components\MyComponent',
+            'on event-stat' => ['frontend\components\MyComponent', 'actionStat'],
+        ],
         'request' => [
             'csrfParam' => '_csrf-frontend',
         ],
@@ -36,14 +40,11 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
-        /*
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
-            'rules' => [
-            ],
+            'rules' => [],
         ],
-        */
     ],
     'params' => $params,
 ];

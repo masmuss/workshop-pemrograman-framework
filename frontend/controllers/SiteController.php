@@ -212,7 +212,13 @@ class SiteController extends Controller
             'model' => $model,
         ]);
     }
-
+    public function beforeAction($action)
+    {
+        if ($action->id == 'create') {
+            $this->enableCsrfValidation = false;
+        }
+        return parent::beforeAction($action);
+    }
     /**
      * Verify email address
      *
